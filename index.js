@@ -13,10 +13,6 @@ const GITHUB_FILE_PATH = process.env.GITHUB_FILE_PATH; // "scripts.json"
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH || 'main';
 const BACKGROUND_IMAGE_URL = process.env.BACKGROUND_IMAGE_URL; // opsional
 
-if (!BOT_TOKEN || !OWNER_ID || !GITHUB_TOKEN || !GITHUB_REPO || !GITHUB_FILE_PATH) {
-  console.error('❌ Missing required environment variables');
-  process.exit(1);
-}
 
 // ========== Helper: Update JSON di GitHub ==========
 async function updateGitHubJSON(newName, newLink) {
